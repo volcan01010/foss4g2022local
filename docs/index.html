@@ -53,21 +53,48 @@
 
 <section>
 	<section>
-		<h2>What is Open Source Software?</h2>
+		<h2>About open source software</h2>
 		<aside data-markdown class="notes">
 			Explanation of source code vs binary, of open source licences and of how open source software is built
 		</aside>
 	</section>
 
-	<section>
-		<h2>Source code versus binary</h2>
+	<section data-markdown>
+		<textarea data-template>
+			### What does open source mean?
+
+			+ Source code is written by developers.
+			+ Binary code is run by computers.
+
+			```sql
+Java / C / C++ / Fortran:
+ + write -> compile -> share -> run
+			
+Python / JavaScript / R:
+ + write -> share -> compile -> run
+			```
+	
+		</textarea>
 		<aside data-markdown class="notes">
-			Discussion of open source licences and how open source software is built
+			Humans write source code but computers run binary files.
+			Binary files are created by the compiler and cannot easily be converted back to the source code.
+			A .exe file on Windows is an example of a binary file.
+			Open source means that the source code is made available so that users can inspect and modify it.
+
+			Languages such as Java are typically compiled and distributed as binaries.
+			Scripting langages such as Python are compiled on the host machine as they are run.
+			This allows line-by-line development and the interactive approach that makes them so useful for data analysis.
+			It also means that they are open source by default.
 		</aside>
 	</section>
 
-	<section>
-		<img src="images/choose_a_license.png" alt="Diagram about licence selection">
+	<section data-markdown>
+		<textarea data-template>
+			### Open source licences
+
+			<img src="images/choose_a_license.png" width=950 alt="Diagram about licence selection">
+		</textarea>
+		
 		<aside data-markdown class="notes">
             Image from [choosealicense.com](https://choosealicense.com).
 
