@@ -41,6 +41,9 @@
 
 			1. I have never used ESRI products in anger.  I learned GIS in academia for mapping volcanic deposits, starting with GMT and could do all that I needed with FOSS products.
 			2. I am a software developer.  I like to work with plain text files and the command line.  I appreciate not everyone does.
+
+			When I wrote the title, "Increasing adoption of open source at BGS", I thought of it as an observation.
+			Actually, I think it is more of a mission statement.
 		</aside>
 	</section>
 
@@ -63,9 +66,19 @@
 		</aside>
 	</section>
 
-	<section data-background-size="contain" data-background="images/choose_a_license.png">
+	<section>
+		<img src="images/choose_a_license.png" alt="Diagram about licence selection">
 		<aside data-markdown class="notes">
             Image from [choosealicense.com](https://choosealicense.com).
+
+			Free and open source licences emphasise freedom.
+			Users are free to use the code for anything that they want.
+			The most important thing is to acknowledge the original authors.
+			This includes Mastodon (open source Twitter equivalent) being used for Donald Trump's truth.social.
+
+            The MIT licence is most permissive and only requires users to include the licence notice and acknowledge source.
+			GPL3 is recursive and requires code linking to these files also to be released with a GPL3 licence.
+			This is the preferred option of the Free Software Foundation because it ensures that everyone benefits.
 
 			The AGPL licence is like the GPL3 but applies to software running on a server.
 			It was created to prevent cloud vendors selling products based on open source without contributing anything back.
@@ -82,11 +95,27 @@
 		</textarea>
 
 		<aside data-markdown class="notes">
-			Featuring:
+			We added the CQL feature to pygeoapi.
+			We did this because is was functionality that we required.
+			We already used the normal version of pygeoapi and were benfiting from the work of others.
+			By adding this feature, others benefit from our work.
 
-			+ Who writes open source Software?
-			+ Why work for free?
-			+ Why is this better?
+			FOSS emphasises solving problems over making money.
+			Code is written to solve the problem, so there is no problem giving it away.
+			As a developer, you can benefit from many solved problems - Standing on the Shoulders of Giants.
+            
+			The webpage shows the process of adding the code:
+			+ Code on GitHub
+			+ Work on a fork and make a pull request
+			+ Discuss changes with core developers and make improvements
+			+ Code is approved and merged
+
+			Everything is in the open.
+			We could see the code and make the changes that we needed - much better than raising a support ticket that you cannot see.
+			We can evaluate the quality of the code and make improvements.
+			
+			Most code is written by a handful of developers e.g. BGS SIGMA is backed by 150+ years organisation with 600 staff, but only 2 core developers.
+			With open source, other people can see and improve the code so it is better.
 		</aside>
 	</section>
 
@@ -100,6 +129,8 @@
 		</textarea>
 
 		<aside data-markdown class="notes">
+			We published a paper about our open source library, PyVOLCANS in JOSS.
+
 			The Journal of Open Source Software is hosted on GitHub.
 			The review process is handled via GitHub issues and takes place in public.
 			On acceptance, the paper publication takes place automatically.
@@ -107,6 +138,8 @@
 			+ [Initial submission](https://github.com/openjournals/joss-reviews/issues/3649#issuecomment-904199342)
 			+ [Reviewer's comments](https://github.com/openjournals/joss-reviews/issues/3649#issuecomment-930210824)
 			+ [Acceptance and publication](https://github.com/openjournals/joss-reviews/issues/3649#issuecomment-1003339857)
+
+			JOSS standards for impact are higher than we'd anticipated, so it is only recommended for established libraries with a community beyond the organisation.
 		</aside>
 	</section>
 </section>
@@ -115,7 +148,7 @@
 	<section>
 		<h2>Addressing enterprise concerns</h2>
 		<aside data-markdown class="notes">
-			Enterprise concerns are lack of support and security risks.
+			Enterprise concerns are lack of support, security risks and integration with existing tools.
 		</aside>
 	</section>
 
@@ -127,13 +160,27 @@
 		Get some logos in here.
 		<aside data-markdown class="notes">
 			We pay for support for open source products from GitLab, Anaconda and Sonatype.
+
+            GitLab and Sonatype work on an open-core model where paying customers get extra features.
+			GitLab is a source control and DevOps tool, like a self-hosted GitHub.
+			With GitLab we get Epics and integrated security scans in CI pipelines.
+			Sonatype is a repository mirror for keeping local copies of software dependencies.
+			With Sonatype we get Firewall for blocking vulnerable packages.
 		</aside>
 	</section>
 
 	<section data-background-size="contain" data-background="images/osgeo_projects.png">
 		<aside data-markdown class="notes">
+			Support is also possible for geospatial software.
+			OSGEO is a non-profit that aims to promote adoption of FOSS tools.
+			This conference is run under their umbrella.
+
 			OSGEO works to ensure that FOSS4G products work well together.
-			Many consultancies contribute to and provide support for these products.
+			For example, anything on the list will work with PostGIS, and is probably developed with PostGIS in mind.
+			GDAL/OGR and GEOS have Python interfaces called Fiona and Shapely, so when you use those libraries there, it is the same code as QGIS under the hood.
+
+			Many consultancies contribute to and provide support for these products e.g. Astun, Lutra, thinkWhere (now Idox).
+			We pay NorthRoad to use Slayer, a tool to convert ESRI layer styles to QGIS-compatible code.
 		</aside>
 	</section>
 
@@ -144,6 +191,16 @@
 	<section data-background-size="contain" data-background="images/xkcd_dependency.png">
 		<aside data-markdown class="notes">
 			Cartoon from [https://xkcd.com/2347](https://xkcd.com/2347)
+
+			This XKCD comic shows how open source tools are built on a tower of dependencies.
+			It can be hard to track all the dependencies.
+			Many dependencies are built by individuals who may not have the same accountability as companies.
+			For example, the developer of the `colors` package in Javascript released an updated that printed anti-war messages if it detected that it was running in Russia.
+			Developers can also be hacked or users can be tricked to install malicious code.
+
+            This is most serious with Python and JavaScript because code is run during installation.
+			In Python, it is the `setup.py` file in the repository.
+			The code could leak passwords, cryptolock your hard drive or mine bitcoin.
 		</aside>
 	</section>
 
@@ -151,6 +208,13 @@
 		Use Nexus screenshot here.
 		<aside data-markdown class="notes">
 			Sonatype Nexus Firewall allows us to quarantine dangerous packages before they are installed.
+
+			Packages are checked against a database of known vulnerabilities.
+			Brand new Python and JavaScript packages cannot be installed until they have been checked.
+
+			BGS recently implemented this.
+			For now all Anaconda users on Windows are automatically using the mirrors.
+			We will roll out the mirror configuration and increase the strictness of the checking in time.
 		</aside>
 	</section>
 
@@ -161,22 +225,27 @@
 	<section data-background-size="contain" data-background="images/xkcd_dependency.png">
 		STANDARDS!!!!!!
 		<aside data-markdown class="notes">
-			Sonatype Nexus Firewall allows us to quarantine dangerous packages before they are installed.
+			The easiest way to ensure that data are interoperable is to follow standards.
+
+			It seems like some of the big players don't follow standards, because interoperability makes it easier for people to switch to open source.
 		</aside>
 	</section>
 
 	<section data-background-size="contain" data-background="images/003_single_vm_and_etl.png">
 		<aside data-markdown class="notes">
-			How do we get open source tools to play nicely with existing infrastructure?
+			Our main issue is communication with Oracle.
+			There are a number of approaches:
 
-			Standards are also essential here!
+			+ QGIS can connect directly to Oracle on Windows with Instant Client.  This works on Windows and would allow direct editing of spatial tables.
+			+ Can compile custom GDAL/OGR for Linux
 
-			PostgreSQL oracle_fdw etc.
-			QGIS can connect directly to Oracle on Windows with Instant Client
-			Slayer plugin for QGIS allows ESRI styling to be converted
-			Can compile custom GDAL/OGR
-			Have shown the way with publishing data infrastructure
-			Next step is getting pipelines to edit data in open source tools then synchronise with Oracle
+			Alternatively, we can transfer the data from Oracle to PostGIS.
+            
+            + For ogcapi.bgs.ac.uk we use the PostgreSQL oracle_fdw to copy tables directly into the database
+			+ For sensors.bgs.ac.uk we use `etlhelper` to transform data and post to database via the API
+
+			Next step is getting pipelines to edit data in open source tools then synchronise with Oracle.
+			Perhaps GeoNetwork will be our first target.
 		</aside>
 	</section>
 </section>
@@ -188,6 +257,7 @@
 			There are open source alternatives for most proprietary tools.
 		</aside>
 	</section>
+
 	<section data-markdown>
 		<textarea data-template>
 			### Spatial Data
@@ -200,7 +270,7 @@
 		</textarea>
 
 		<aside data-markdown class="notes">
-			Notes
+			These are areas where BGS has a huge infrastructure and any change would need to be gradual.
 		</aside>
 	</section>
 
@@ -218,7 +288,7 @@
 		</textarea>
 
 		<aside data-markdown class="notes">
-			Notes
+			Spatial data processing and analysis are adopting these tools with enthusiasm as they provide reproducible methods.
 		</aside>
 	</section>
 
@@ -234,7 +304,7 @@
 		</textarea>
 
 		<aside data-markdown class="notes">
-			These are less realistic as such decisions are taken above BGS level, but why not?
+			These may be wishful thinking, but then again, why not?
 		</aside>
 	</section>
 </section>
@@ -251,6 +321,14 @@
 		<aside data-markdown class="notes">
 			An example where the corporations are flexing their muscle to ignore open source licences
 			https://www.theregister.com/2022/11/11/githubs_copilot_opinion/
+
+			GitHub have released CoPilot.
+			It is an artificial intelligence for code completion.
+			It has been trained on millions of lines of code, much of which is open source (including GPL licences).
+			Microsoft claim that the models don't contain the code itself, but some of the code that it produces is verbatim copies of open source material.
+			The GitHub terms of service say that Microsoft can use your code.
+			Microsoft are charging for this, but they didn't pay developers and don't generate acknowledgements.
+			They are being sued.
 		</aside>
 	</section>
 
@@ -258,6 +336,15 @@
 		<aside data-markdown class="notes">
 			An example where open source can save the world from evil corporations.
 			https://www.theregister.com/2022/08/16/john_deere_doom/
+
+			John Deere tractors are controlled by computers.
+			Users are not permitted to see or modify the code that they run on.
+            This means that you cannot get your tractor serviced anywhere other than at John Deere.
+			Tesla have similar policies.
+
+			There is a growing "right to repair" movement in America.
+			If Americans love anything more than business, it's their vehicles.
+			If the movement wins then open source firmware allows customers to own what they have bought again.
 		</aside>
 	</section>
 </section>
