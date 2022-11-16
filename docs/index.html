@@ -22,7 +22,7 @@
 
 <section>
 	<section>
-		<h4>Welcome</h4>
+		<h2>Increasing open source adoption at the British Geological Survey</h2>
 		<p>
 		<span class="small"><a href="https://twitter.com/volcan01010">Dr John A Stevenson</a> / <a href="https://twitter.com/volcan01010">@volcan01010</a></span>
 		</p>
@@ -31,40 +31,54 @@
 			Speaker notes
 		</aside>
 	</section>
+</section>
 
+<section>
 	<section>
-		<h4>I am biased</h4>
-		<ul>[Slides for the break](https://docs.google.com/presentation/d/1oO0mdWGFuPl3AFTFO_q482lFZ3OqdypW2pzzVhHImWA/edit?usp=sharing)
-		<li>A bullet</li>
-		<li>Another bullet</li>
-		</ul>
+		<h2>:emoji: Warning: bias ahead :emoji:</h2>
 		<aside data-markdown class="notes">
-			Notes
+	        This presentation will not be an unbiased view.
 
+			1. I have never used ESRI products in anger.  I learned GIS in academia for mapping volcanic deposits, starting with GMT and could do all that I needed with FOSS products.
+			2. I am a software developer.  I like to work with plain text files and the command line.  I appreciate not everyone does.
+		</aside>
+	</section>
+
+	<section data-background-size="contain" data-background="images/H3_isopach_map.png"></section>
+	<section data-background-size="contain" data-background="images/manipulate_and_plot.png"></section>
+</section>
+
+<section>
+	<section>
+		<h2>What is Open Source Software?</h2>
+		<aside data-markdown class="notes">
+			Explanation of source code vs binary, of open source licences and of how open source software is built
 		</aside>
 	</section>
 
 	<section>
-		<h4>What is Open Source Software?</h4>
+		<h2>Source code versus binary</h2>
 		<aside data-markdown class="notes">
-			Notes
+			Discussion of open source licences and how open source software is built
 		</aside>
 	</section>
 
-	<section>
-		<h4>Open source licences</h4>
-		<a href="https://choosealicense.com"><img src="images/choose_a_license.png" width=700 style="background:white; border:15px solid white; box-shadow:none;"></a>
-		<p><a href="https://choosealicense.com">choosealicense.com</a></p>
+	<section data-background-size="contain" data-background="images/choose_a_license.png">
 		<aside data-markdown class="notes">
-			Notes
+            Image from [choosealicense.com](https://choosealicense.com).
+
+			The AGPL licence is like the GPL3 but applies to software running on a server.
+			It was created to prevent cloud vendors selling products based on open source without contributing anything back.
 		</aside>
 	</section>
 
 	<section data-markdown>
 		<textarea data-template>
-			#### How open source software is built
+			### How open source software is built
 
-			[Adding CQL support to pygeoapi](https://github.com/geopython/pygeoapi/pull/964)
+			<img src="images/xkcd_dependency.png" width=100 alt="pygeoapi logo">
+
+			[Add CQL to PostgreSQL provider (via pygeofilter and sqlalchemy)](https://github.com/geopython/pygeoapi/pull/964)
 		</textarea>
 
 		<aside data-markdown class="notes">
@@ -72,41 +86,117 @@
 
 			+ Who writes open source Software?
 			+ Why work for free?
-			+ How about science worked like that? https://joss.theoj.org/papers/10.21105/joss.03649
-			https://github.com/openjournals/joss-reviews/issues/3649#issuecomment-904199342
-			https://github.com/openjournals/joss-reviews/issues/3649#issuecomment-930210824
-			https://github.com/openjournals/joss-reviews/issues/3649#issuecomment-1003339857
-
-
-
-		</aside>
-	</section>
-
-	<section>
-		<h4>Getting support</h4>
-		<aside data-markdown class="notes">
-			Notes
-		</aside>
-	</section>
-
-	<section>
-		<h4>Using open source software safely</h4>
-		<a href="https://xkcd.com/2347"><img src="images/xkcd_dependency.png" width=700 style="background:white; border:15px solid white; box-shadow:none;"></a>
-		<aside data-markdown class="notes">
-			Using Sonatype to quarantine dependencies.
+			+ Why is this better?
 		</aside>
 	</section>
 
 	<section data-markdown>
 		<textarea data-template>
-			#### Alternatives to proprietary tools (spatial/scientific)
+			### The future of scientific publishing?
+
+			<img src="images/xkcd_dependency.png" width=100 alt="JOSS logo">
+
+			[PyVOLCANS in the Journal of Open Source Software]( https://joss.theoj.org/papers/10.21105/joss.03649)
+		</textarea>
+
+		<aside data-markdown class="notes">
+			The Journal of Open Source Software is hosted on GitHub.
+			The review process is handled via GitHub issues and takes place in public.
+			On acceptance, the paper publication takes place automatically.
+
+			+ [Initial submission](https://github.com/openjournals/joss-reviews/issues/3649#issuecomment-904199342)
+			+ [Reviewer's comments](https://github.com/openjournals/joss-reviews/issues/3649#issuecomment-930210824)
+			+ [Acceptance and publication](https://github.com/openjournals/joss-reviews/issues/3649#issuecomment-1003339857)
+		</aside>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h2>Addressing enterprise concerns</h2>
+		<aside data-markdown class="notes">
+			Enterprise concerns are lack of support and security risks.
+		</aside>
+	</section>
+
+	<section>
+		<h4>Support</h4>
+	</section>
+
+	<section data-background-size="contain" data-background="images/xkcd_dependency.png">
+		Get some logos in here.
+		<aside data-markdown class="notes">
+			We pay for support for open source products from GitLab, Anaconda and Sonatype.
+		</aside>
+	</section>
+
+	<section data-background-size="contain" data-background="images/osgeo_projects.png">
+		<aside data-markdown class="notes">
+			OSGEO works to ensure that FOSS4G products work well together.
+			Many consultancies contribute to and provide support for these products.
+		</aside>
+	</section>
+
+	<section>
+		<h4>Security</h4>
+	</section>
+
+	<section data-background-size="contain" data-background="images/xkcd_dependency.png">
+		<aside data-markdown class="notes">
+			Cartoon from [https://xkcd.com/2347](https://xkcd.com/2347)
+		</aside>
+	</section>
+
+	<section data-background-size="contain" data-background="images/xkcd_dependency.png">
+		Use Nexus screenshot here.
+		<aside data-markdown class="notes">
+			Sonatype Nexus Firewall allows us to quarantine dangerous packages before they are installed.
+		</aside>
+	</section>
+
+	<section>
+		<h4>Integration</h4>
+	</section>
+
+	<section data-background-size="contain" data-background="images/xkcd_dependency.png">
+		STANDARDS!!!!!!
+		<aside data-markdown class="notes">
+			Sonatype Nexus Firewall allows us to quarantine dangerous packages before they are installed.
+		</aside>
+	</section>
+
+	<section data-background-size="contain" data-background="images/003_single_vm_and_etl.png">
+		<aside data-markdown class="notes">
+			How do we get open source tools to play nicely with existing infrastructure?
+
+			Standards are also essential here!
+
+			PostgreSQL oracle_fdw etc.
+			QGIS can connect directly to Oracle on Windows with Instant Client
+			Slayer plugin for QGIS allows ESRI styling to be converted
+			Can compile custom GDAL/OGR
+			Have shown the way with publishing data infrastructure
+			Next step is getting pipelines to edit data in open source tools then synchronise with Oracle
+		</aside>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h2>Open source alternatives to proprietary tools</h2>
+		<aside data-markdown class="notes">
+			There are open source alternatives for most proprietary tools.
+		</aside>
+	</section>
+	<section data-markdown>
+		<textarea data-template>
+			### Spatial Data
 
 			|Proprietary|FOSS|
 			|---|---|
+			|Oracle Spatial|PostGIS|
 			|Arc server|Geoserver, Mapserver, pygeoapi|
-			|ArcGIS|QGIS, GRASS|
 			|FME|ogr2ogr, etlhelper, QGIS processing|
-
 		</textarea>
 
 		<aside data-markdown class="notes">
@@ -116,12 +206,15 @@
 
 	<section data-markdown>
 		<textarea data-template>
-			#### Alternatives to proprietary tools (general)
+			### Analysis and research
 
 			|Proprietary|FOSS|
 			|---|---|
+			|ArcGIS | QGIS |
+			|ArcPy | GRASS, geopandas, R-spatial|
+			|Matlab| Python, R|
 			|CorelDraw, Illustrator|Inkscape|
-
+			|Photoshop|GIMP|
 		</textarea>
 
 		<aside data-markdown class="notes">
@@ -131,77 +224,41 @@
 
 	<section data-markdown>
 		<textarea data-template>
-			#### Combining open source and proprietary tools
+			### Business
 
+			| Proprietary | FOSS |
+			|---|---|
+			| Microsoft Office | LibreOffice + NextCloud |
+			| Microsoft Teams | Matrix / Element |
+			| Microsoft Windows | Ubuntu Linux |
 		</textarea>
 
 		<aside data-markdown class="notes">
-			PostgreSQL oracle_fdw etc.
-			Publishing first
-		</aside>
-	</section>
-
-	<section data-markdown>
-		<textarea data-template>
-			#### Future debates in open source
-
-		</textarea>
-
-		<aside data-markdown class="notes">
-			PostgreSQL oracle_fdw etc.
-			Publishing first
-		</aside>
-	</section>
-
-</section>
-
-
-<section>
-	<section>
-		<h4>Increasing Open Source Adoption at the British Geological Survey</h4>
-		<p>
-		<span class="small"><a href="https://twitter.com/volcan01010">Dr John A Stevenson</a> / <a href="https://twitter.com/volcan01010">@volcan01010</a></span>
-		</p>
-		<a href="https://www.bgs.ac.uk"><img src="images/BGS-Logo-Pos-RGB.svg" width=300 style="background:white; border:15px solid white; box-shadow:none;"></a>
-		<aside data-markdown class="notes">
-			Speaker notes
-		</aside>
-	</section>
-	<section>
-		<h4>I am biased</h4>
-		<ul>
-		<li>A bullet</li>
-		<li>Another bullet</li>
-		</ul>
-		<aside data-markdown class="notes">
-			Notes
-
+			These are less realistic as such decisions are taken above BGS level, but why not?
 		</aside>
 	</section>
 </section>
 
 <section>
-
 	<section>
-		<img class="stretch" src="images/BGS-Logo-Pos-RGB.svg">
-		<a href="https://ukgeos.ac.uk/observatories/glasgow">UK Geoenergy Observatories</a>
-	<aside data-markdown class="notes">
-		Slide with an image
-	</aside>
+		<h3>Open source in the news</h3>
+		<aside data-markdown class="notes">
+			Some examples where the open source philosophy is in the news.
+		</aside>
 	</section>
 
-</section>
+	<section data-background-size="contain" data-background="images/github_copilot.png">
+		<aside data-markdown class="notes">
+			An example where the corporations are flexing their muscle to ignore open source licences
+			https://www.theregister.com/2022/11/11/githubs_copilot_opinion/
+		</aside>
+	</section>
 
-<section>
-	<section data-background-size="contain" data-background="images/BGS-Logo-Pos-RGB.svg">
-		<h4>Slide with background image for conclusion</h4>
-		<ol>
-			<li>We use Docker and docker-compose to install PostgreSQL</li>
-			<li>Use <i>etlhelper</i> to to simplify data transfer with Python</li>
-		</ol>
-	<aside data-markdown class="notes">
-		This slide wasn't in the presentation as recorded, but was added later to reiterate the main points.
-	</aside>
+	<section data-background-size="contain" data-background="images/john_deere.png">
+		<aside data-markdown class="notes">
+			An example where open source can save the world from evil corporations.
+			https://www.theregister.com/2022/08/16/john_deere_doom/
+		</aside>
 	</section>
 </section>
 
