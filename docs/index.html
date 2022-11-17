@@ -28,14 +28,14 @@
 		</p>
 		<a href="https://www.bgs.ac.uk"><img src="images/BGS-Logo-Pos-RGB.svg" width=300 style="background:white; border:15px solid white; box-shadow:none;"></a>
 		<aside data-markdown class="notes">
-			Speaker notes
+			This talk was given as an introduction to the discussion session.
 		</aside>
 	</section>
 </section>
 
 <section>
 	<section>
-		<h2>:emoji: Warning: bias ahead :emoji:</h2>
+		<h2>⚠️ Warning: bias ahead ⚠️</h2>
 		<aside data-markdown class="notes">
 	        This presentation will not be an unbiased view.
 
@@ -44,6 +44,8 @@
 
 			When I wrote the title, "Increasing adoption of open source at BGS", I thought of it as an observation.
 			Actually, I think it is more of a mission statement.
+
+			For pure advocacy, read the report on [Benefits of Open Source](benefits_of_open_source.md) that we wrote in 2017.
 		</aside>
 	</section>
 
@@ -73,7 +75,6 @@ Java / C / C++ / Fortran:
 Python / JavaScript / R:
  + write -> share -> compile -> run
 			```
-	
 		</textarea>
 		<aside data-markdown class="notes">
 			Humans write source code but computers run binary files.
@@ -92,7 +93,7 @@ Python / JavaScript / R:
 		<textarea data-template>
 			### Open source licences
 
-			<img src="images/choose_a_license.png" width=950 alt="Diagram about licence selection">
+			<img src="images/choose_a_license.png" alt="Diagram about licence selection" class="r-stretch">
 		</textarea>
 		
 		<aside data-markdown class="notes">
@@ -116,7 +117,7 @@ Python / JavaScript / R:
 		<textarea data-template>
 			### How open source software is built
 
-			<img src="images/xkcd_dependency.png" width=100 alt="pygeoapi logo">
+			<img src="images/pygeoapi-logo.png" alt="pygeoapi logo" width="800">
 
 			[Add CQL to PostgreSQL provider (via pygeofilter and sqlalchemy)](https://github.com/geopython/pygeoapi/pull/964)
 		</textarea>
@@ -150,7 +151,7 @@ Python / JavaScript / R:
 		<textarea data-template>
 			### The future of scientific publishing?
 
-			<img src="images/xkcd_dependency.png" width=100 alt="JOSS logo">
+			<img src="images/joss-logo.png" alt="JOSS logo" width="350">
 
 			[PyVOLCANS in the Journal of Open Source Software]( https://joss.theoj.org/papers/10.21105/joss.03649)
 		</textarea>
@@ -183,8 +184,12 @@ Python / JavaScript / R:
 		<h4>Support</h4>
 	</section>
 
-	<section data-background-size="contain" data-background="images/xkcd_dependency.png">
-		Get some logos in here.
+	<section>
+		<p>
+			<img src="images/gitlab-logo-100.svg" alt="GitLab logo" width="550">
+			<img src="images/sonatype_logo.png" alt="Sonatype logo" width="550">
+			<img src="images/Anaconda_Logo.png" alt="Anaconda logo" width="400">
+		</p>
 		<aside data-markdown class="notes">
 			We pay for support for open source products from GitLab, Anaconda and Sonatype.
 
@@ -196,7 +201,8 @@ Python / JavaScript / R:
 		</aside>
 	</section>
 
-	<section data-background-size="contain" data-background="images/osgeo_projects.png">
+	<section>
+			<img src="images/osgeo_projects.png" alt="OSGEO projects" class="r-stretch">
 		<aside data-markdown class="notes">
 			Support is also possible for geospatial software.
 			OSGEO is a non-profit that aims to promote adoption of FOSS tools.
@@ -215,7 +221,8 @@ Python / JavaScript / R:
 		<h4>Security</h4>
 	</section>
 
-	<section data-background-size="contain" data-background="images/xkcd_dependency.png">
+	<section>
+			<img src="images/xkcd_dependency.png" alt="XKCD Dependency comic" class="r-stretch">
 		<aside data-markdown class="notes">
 			Cartoon from [https://xkcd.com/2347](https://xkcd.com/2347)
 
@@ -231,8 +238,8 @@ Python / JavaScript / R:
 		</aside>
 	</section>
 
-	<section data-background-size="contain" data-background="images/xkcd_dependency.png">
-		Use Nexus screenshot here.
+	<section>
+		Nexus Firewall can quarantine dangerous packages.
 		<aside data-markdown class="notes">
 			Sonatype Nexus Firewall allows us to quarantine dangerous packages before they are installed.
 
@@ -249,8 +256,8 @@ Python / JavaScript / R:
 		<h4>Integration</h4>
 	</section>
 
-	<section data-background-size="contain" data-background="images/xkcd_dependency.png">
-		STANDARDS!!!!!!
+	<section>
+		<h2 class="r-fit-text"><b><div class="blink_me">STANDARDS!</div></b></h2>
 		<aside data-markdown class="notes">
 			The easiest way to ensure that data are interoperable is to follow standards.
 
@@ -258,7 +265,9 @@ Python / JavaScript / R:
 		</aside>
 	</section>
 
-	<section data-background-size="contain" data-background="images/003_single_vm_and_etl.png">
+	<section>
+		<h4>Multiple approaches to interact with Oracle Spatial</h4>
+			<img src="images/003_single_vm_and_etl.png" alt="ETLHelper to FROST API" class="r-stretch">
 		<aside data-markdown class="notes">
 			Our main issue is communication with Oracle.
 			There are a number of approaches:
@@ -344,7 +353,8 @@ Python / JavaScript / R:
 		</aside>
 	</section>
 
-	<section data-background-size="contain" data-background="images/github_copilot.png">
+	<section>
+			<img src="images/github_copilot.png" alt="GitHub Copilot logo" class="r-stretch">
 		<aside data-markdown class="notes">
 			An example where the corporations are flexing their muscle to ignore open source licences
 			https://www.theregister.com/2022/11/11/githubs_copilot_opinion/
@@ -359,7 +369,8 @@ Python / JavaScript / R:
 		</aside>
 	</section>
 
-	<section data-background-size="contain" data-background="images/john_deere.png">
+	<section>
+			<img src="images/john_deere.png" alt="Hacked John Deere console" class="r-stretch">
 		<aside data-markdown class="notes">
 			An example where open source can save the world from evil corporations.
 			https://www.theregister.com/2022/08/16/john_deere_doom/
