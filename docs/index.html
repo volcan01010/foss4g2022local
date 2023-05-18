@@ -63,6 +63,24 @@
 
 	<section data-markdown>
 		<textarea data-template>
+			### Freeware != Free software
+			<img src="images/freeware_popups.webp" alt="Screenshot of Windows desktop full of popups" class="r-stretch">
+            
+		</textarea>
+		<aside data-markdown class="notes">
+			Freeware / shareware are not the same as free software.
+			Do not be put off by Windows apps that install toolbars in your browser or mobile apps filled with ads.
+
+			The "Free" in Free software is Free as in speech, not free as in beer.
+			It is sometimes replaced with "libre", which is in contrast to "gratis".
+			This gives the term FLOSS.
+
+			Image source: https://www.howtogeek.com/207692/yes-every-freeware-download-site-is-serving-crapware-heres-the-proof/
+		</aside>
+	</section>
+
+	<section data-markdown>
+		<textarea data-template>
 			### What does open source mean?
 
 			+ Source code is written by developers.
@@ -113,6 +131,34 @@ Python / JavaScript / R:
 		</aside>
 	</section>
 
+</section>
+
+<section>
+	<section>
+		<h2>Advantages of open source software</h2>
+		<aside data-markdown class="notes">
+			Explanation of advantages of open source software.
+		</aside>
+	</section>
+	<section data-markdown>
+		<textarea data-template>
+			### Software written to get things done
+			<img src="images/windows-lock-screen.png" alt="Windows lock screen with click-bait links" class="r-stretch">
+            
+		</textarea>
+		<aside data-markdown class="notes">
+			Open source software is written to get things done; the purpose of proprietary software is to make money.
+			These annoying click-bait links on the Windows lock screen will open in the Edge browser, displaying results from Bing search.
+			This gives Microsoft a chance to push you towards their products.
+			No-one asked for this and it doesn't help get things done, but it does make money.
+			If someone tried this in an open source project, someone else would create a fork without the ads and people would use that instead.
+
+			FOSS emphasises solving problems over making money.
+			Code is written to solve the problem, so there is no problem giving it away.
+
+            Image source: https://answers.microsoft.com/en-us/windows/forum/all/lock-screen-has-no-login-dialogue/b59ab023-f4b3-406f-8066-f792af55c25c
+		</aside>
+	</section>
 	<section data-markdown>
 		<textarea data-template>
 			### How open source software is built
@@ -120,18 +166,18 @@ Python / JavaScript / R:
 			<img src="images/pygeoapi-logo.png" alt="pygeoapi logo" width="800">
 
 			[Add CQL to PostgreSQL provider (via pygeofilter and sqlalchemy)](https://github.com/geopython/pygeoapi/pull/964)
+
+			Musical interlude (1:40): [Wellerman](https://www.youtube.com/watch?v=UgsurPg9Ckw) vs [ETLHelper 2.0](https://github.com/BritishGeologicalSurvey/etlhelper/pull/97)
 		</textarea>
 
 		<aside data-markdown class="notes">
+			As a developer, you can benefit from many solved problems - Standing on the Shoulders of Giants.
+
 			We added the CQL feature to pygeoapi.
 			We did this because is was functionality that we required.
 			We already used the normal version of pygeoapi and were benfiting from the work of others.
 			By adding this feature, others benefit from our work.
 
-			FOSS emphasises solving problems over making money.
-			Code is written to solve the problem, so there is no problem giving it away.
-			As a developer, you can benefit from many solved problems - Standing on the Shoulders of Giants.
-            
 			The webpage shows the process of adding the code:
 			+ Code on GitHub
 			+ Work on a fork and make a pull request
@@ -144,6 +190,30 @@ Python / JavaScript / R:
 			
 			Most code is written by a handful of developers e.g. BGS SIGMA is backed by 150+ years organisation with 600 staff, but only 2 core developers.
 			With open source, other people can see and improve the code so it is better.
+
+			The Wellerman video was released on TikTok.
+			TikTok provides tools to allow users to "duet" and to modify videos created by others.
+			Once you release something onto the internet, you can't predict where it will go.
+
+			Our ETL Helper tool got a merge request to add a Database class.
+			It was a great idea and something that none of us had thought of.
+			We plan to add it into ETL Helper v2.0.
+		</aside>
+	</section>
+
+	<section data-markdown>
+		<textarea data-template>
+			### The future of reproducible science?
+			<img src="images/egu-open-source-sessions.png" alt="Over 50 open-source sessions at EGU" class="r-stretch">
+		</textarea>
+
+		<aside data-markdown class="notes">
+		  Reproducibility is central to science.
+		  Open source has two advantages:
+		    + The details of any algorithms are available to inspect to know exactly what was development
+			+ Anyone can download the same software you used to reproduce / extend your work
+		  Journals now request that users publish their algorithms alongside their data and papers.
+		  At EGU this year there were over 50 sessions mentioning open source including one specifically covering geospatial tools.
 		</aside>
 	</section>
 
